@@ -9,17 +9,56 @@
 using namespace std; 
 
 //function prototypes
-int countCharacter(string str);
+int countVowel(string str);
 
 int main() {
 	string str;
 	cout << "Enter a string or Q to quit: ";
 	getline(cin, str);
-	cout << "\nThe string length is: " << countCharacter(str);
+
+	cout << "The number of vowels is: " << countVowel(str);
+
 }
 
-int countCharacter(string str) {
+int countVowel(string str) {
 	int length = str.length();
-	return length;
+	char currentCharacter = ' ';
+	int numVowels = 0;
+	for (int i = 0; i < length; i++) {
+		currentCharacter = str[i];
+		switch (currentCharacter) {
+		case 'A':
+			numVowels += 1;
+			break;
+		case 'a':
+			numVowels += 1;
+			break;
+		case 'E':
+			numVowels += 1;
+			break;
+		case 'e':
+			numVowels += 1;
+			break;
+		case 'I':
+			numVowels += 1;
+			break;
+		case 'i':
+			numVowels += 1;
+			break;
+		case 'O':
+			numVowels += 1;
+			break;
+		case 'o':
+			numVowels += 1;
+			break;
+		case 'U':
+			numVowels += 1;
+			break;
+		case 'u':
+			numVowels += 1;
+			break;
+		}
 
+	}
+	return numVowels;
 }
